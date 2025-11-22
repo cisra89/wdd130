@@ -1,6 +1,4 @@
-/* =========================================================
-    CSS VARIABLES
-    ========================================================= */
+
 :root {
     --primary-color: #1e88e5; /* A bright, primary blue */
     --accent1-color: #0d47a1; /* A dark, deep blue (used for body text/bg) */
@@ -9,19 +7,14 @@
     --body-font: Arial, Helvetica, sans-serif;
 }
 
-/* =========================================================
-    RESET
-    ========================================================= */
 * {
-    /* CORRECTION 1: ADDED UNIVERSAL RESET */
+
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-/* =========================================================
-    BODY
-    ========================================================= */
+
 body {
     font-family: var(--body-font);
     color: var(--accent1-color);
@@ -33,12 +26,10 @@ header, main, footer {
     margin: 0 auto;
 }
 
-/* =========================================================
-    HEADER
-    ========================================================= */
+
 header {
     display: grid;
-    grid-template-columns: 100px auto; /* 100px for logo, auto for nav */
+    grid-template-columns: 100px auto; 
     align-items: center;
     padding: 10px 0;
     border-bottom: 1px solid var(--primary-color);
@@ -51,8 +42,8 @@ header img {
 
 header nav {
     text-align: right;
-    margin: 0; /* Override general margin */
-    padding: 0; /* Override general padding */
+    margin: 0; 
+    padding: 0;
 }
 
 header nav a {
@@ -66,31 +57,21 @@ header nav a {
 
 header nav a:hover {
     background-color: var(--accent1-color);
-    /* CORRECTION 3: USED --ACCENT2-COLOR FOR HOVER TEXT */
     color: var(--accent2-color); 
     border-radius: 5px;
 }
 
-/* =========================================================
-    HEADINGS
-    ========================================================= */
 h1, h2 {
     font-family: var(--heading-font);
-    /* CORRECTION 2: CHANGED H2 COLOR FOR CONTRAST */
     color: var(--accent1-color); 
 }
 
-/* =========================================================
-    GENERAL ELEMENT SPACING
-    ========================================================= */
 nav, p, section, article {
     margin: 16px;
     padding: 8px;
 }
 
-/* =========================================================
-    HERO SECTION
-    ========================================================= */
+
 .hero {
     position: relative;
     margin: 0;
@@ -133,16 +114,13 @@ nav, p, section, article {
     border-radius: 4px;
 }
 
-/* Clear the float after the image in the article */
 .hero article::after {
     content: "";
     display: table;
     clear: both;
 }
 
-/* =========================================================
-    FOOTER
-    ========================================================= */
+
 footer {
     display: flex;
     justify-content: space-between;
@@ -151,11 +129,10 @@ footer {
     margin-top: 30px;
     border-top: 1px solid var(--primary-color);
     text-align: center;
-    color: var(--primary-color);
+    color: var(--accent1-color); 
     font-size: 0.9em;
 }
 
-/* Remove underline from footer social media icons */
 .socialmedia a {
     text-decoration: none;
     margin-left: 15px;
