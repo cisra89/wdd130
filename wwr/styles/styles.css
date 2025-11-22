@@ -1,26 +1,27 @@
 /* =========================================================
-   CSS VARIABLES
-   ========================================================= */
+    CSS VARIABLES
+    ========================================================= */
 :root {
-    --primary-color: #1e88e5;
-    --accent1-color: #0d47a1;
-    --accent2-color: #fdd835;
+    --primary-color: #1e88e5; /* A bright, primary blue */
+    --accent1-color: #0d47a1; /* A dark, deep blue (used for body text/bg) */
+    --accent2-color: #fdd835; /* A vibrant yellow/gold (used for highlights) */
     --heading-font: 'Arial Black', sans-serif;
     --body-font: Arial, Helvetica, sans-serif;
 }
 
 /* =========================================================
-   RESET
-   ========================================================= */
+    RESET
+    ========================================================= */
 * {
+    /* CORRECTION 1: ADDED UNIVERSAL RESET */
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
 /* =========================================================
-   BODY
-   ========================================================= */
+    BODY
+    ========================================================= */
 body {
     font-family: var(--body-font);
     color: var(--accent1-color);
@@ -33,31 +34,66 @@ header, main, footer {
 }
 
 /* =========================================================
-   HEADINGS
-   ========================================================= */
-h1, h2 {
-    font-family: var(--heading-font);
-    color: var(--primary-color);
+    HEADER
+    ========================================================= */
+header {
+    display: grid;
+    grid-template-columns: 100px auto; /* 100px for logo, auto for nav */
+    align-items: center;
+    padding: 10px 0;
+    border-bottom: 1px solid var(--primary-color);
+}
+
+header img {
+    width: 100%;
+    height: auto;
+}
+
+header nav {
+    text-align: right;
+    margin: 0; /* Override general margin */
+    padding: 0; /* Override general padding */
+}
+
+header nav a {
+    display: inline-block;
+    padding: 10px 15px;
+    text-decoration: none;
+    color: var(--accent1-color);
+    font-weight: bold;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+header nav a:hover {
+    background-color: var(--accent1-color);
+    /* CORRECTION 3: USED --ACCENT2-COLOR FOR HOVER TEXT */
+    color: var(--accent2-color); 
+    border-radius: 5px;
 }
 
 /* =========================================================
-   GENERAL ELEMENT SPACING
-   ========================================================= */
+    HEADINGS
+    ========================================================= */
+h1, h2 {
+    font-family: var(--heading-font);
+    /* CORRECTION 2: CHANGED H2 COLOR FOR CONTRAST */
+    color: var(--accent1-color); 
+}
+
+/* =========================================================
+    GENERAL ELEMENT SPACING
+    ========================================================= */
 nav, p, section, article {
     margin: 16px;
     padding: 8px;
 }
 
-/* Remove underline from footer social media icons */
-.socialmedia a {
-    text-decoration: none;
-}
-
 /* =========================================================
-   HERO SECTION
-   ========================================================= */
+    HERO SECTION
+    ========================================================= */
 .hero {
     position: relative;
+    margin: 0;
 }
 
 .hero img {
@@ -72,9 +108,10 @@ nav, p, section, article {
     width: 100%;
     padding: 16px;
     text-align: center;
-    opacity: 0.7;
+    opacity: 0.85;
     background-color: var(--accent1-color);
     color: #fff;
+    margin: 0;
 }
 
 .hero article {
@@ -82,9 +119,10 @@ nav, p, section, article {
     bottom: 20px;
     left: 20px;
     right: 20px;
-    background-color: rgba(255, 255, 255, 0.75);
+    background-color: rgba(255, 255, 255, 0.9);
     padding: 16px;
     border-radius: 6px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
 .hero article img {
@@ -93,4 +131,38 @@ nav, p, section, article {
     margin-left: 12px;
     margin-bottom: 8px;
     border-radius: 4px;
+}
+
+/* Clear the float after the image in the article */
+.hero article::after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+/* =========================================================
+    FOOTER
+    ========================================================= */
+footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 0;
+    margin-top: 30px;
+    border-top: 1px solid var(--primary-color);
+    text-align: center;
+    color: var(--primary-color);
+    font-size: 0.9em;
+}
+
+/* Remove underline from footer social media icons */
+.socialmedia a {
+    text-decoration: none;
+    margin-left: 15px;
+}
+
+.socialmedia img {
+    width: 24px;
+    height: 24px;
+    vertical-align: middle;
 }
