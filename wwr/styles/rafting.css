@@ -1,8 +1,7 @@
-
 :root {
-    --primary-color: #1e88e5; /* A bright, primary blue */
-    --accent1-color: #0d47a1; /* A dark, deep blue (used for body text/bg) */
-    --accent2-color: #fdd835; /* A vibrant yellow/gold (used for highlights) */
+    --primary-color: #1e88e5; 
+    --accent1-color: #0d47a1; 
+    --accent2-color: #fdd835; 
     --heading-font: 'Arial Black', sans-serif;
     --body-font: Arial, Helvetica, sans-serif;
 }
@@ -20,7 +19,6 @@ body {
     color: var(--accent1-color);
 }
 
-/* Center content */
 header, main, footer {
     width: 840px;
     margin: 0 auto;
