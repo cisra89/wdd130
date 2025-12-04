@@ -4,6 +4,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Explore our rafting company's mission and history, and learn how our passionate team creates memorable adventures on the water.">
+    <meta name="author" content="Israel Cirne">
     <title>Contact Us - White Water Rafting Co.</title>
     <link rel="stylesheet" href="styles/rafting.css">
 </head>
@@ -14,8 +17,9 @@
         <img src="images/rapids.jpg" alt="Rafting Company Logo">
         <nav>
             <a href="index.html">Home</a>
+            <a href="about.html">About Us</a>
             <a href="trips.html">Trips</a>
-            <a href="contact.html">Contact</a>
+            <a href="contact.html">Contact Us</a>
         </nav>
     </header>
 
@@ -26,30 +30,32 @@
         <section>
             <h2>Company Information</h2>
             <p><strong>Address:</strong> 123 River Run Blvd, Rapids City, CO 80211</p>
-            <p><strong>Phone:</strong> +1 (800) 555-RAFT</p>
+            <p><strong>Phone:</strong> +52 22-89-2566</p>
             <p><strong>Email:</strong> info@raftingco.com</p>
 
+            <!-- FIXED Google Maps Embed -->
             <iframe
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3069.5584391925607!2d-105.00432168462338!3d39.76184937944771!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x876c7ea27e1234%3A0xa86ad9584c9!2sColorado%20River!5e0!3m2!1sen!2sus!4v0000000000"
-                width="100%" height="300" allowfullscreen loading="lazy">
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3069.5584391925607!2d-105.007!3d39.752!2m3!1f0!2f0!3f0!3m2!1sen!2sus!4v1700000000000!5m2!1sen!2sus"
+                style="width: 100%; height: 300px;" allowfullscreen loading="lazy">
             </iframe>
+
         </section>
 
         <section>
             <h2>Meet Our Team</h2>
 
             <figure>
-                <img src="images/employee1.jpg" alt="Guide Emma">
+                <img src="images/employee1.jpg" alt="Guide Emma smiling">
                 <figcaption>Emma — Lead Guide</figcaption>
             </figure>
 
             <figure>
-                <img src="images/employee2.jpg" alt="Guide Lucas">
+                <img src="images/employee2.jpg" alt="Guide Lucas assisting guests">
                 <figcaption>Lucas — Adventure Specialist</figcaption>
             </figure>
 
             <figure>
-                <img src="images/employee3.jpg" alt="Manager Sarah">
+                <img src="images/employee3.jpg" alt="Office Manager Sarah at desk">
                 <figcaption>Sarah — Office Manager</figcaption>
             </figure>
         </section>
@@ -67,16 +73,20 @@
 
                 <p><strong>Purpose of Message:</strong></p>
 
-                <label><input type="radio" name="purpose" value="General Inquiry" required> General Inquiry</label><br>
-                <label><input type="radio" name="purpose" value="Reservation Question"> Reservation Question</label><br>
-                <label><input type="radio" name="purpose" value="Website Suggestion"> Website Suggestion</label><br><br>
+                <input type="radio" id="inquiry" name="purpose" value="General Inquiry" required>
+                <label for="inquiry">General Inquiry</label><br>
+
+                <input type="radio" id="reservation" name="purpose" value="Reservation Question">
+                <label for="reservation">Reservation Question</label><br>
+
+                <input type="radio" id="suggestion" name="purpose" value="Website Suggestion">
+                <label for="suggestion">Website Suggestion</label><br><br>
 
                 <label for="message">Message:</label><br>
                 <textarea id="message" name="message" rows="5" required></textarea><br><br>
 
-                <label>
-                    <input type="checkbox" name="subscribe"> Please subscribe me to the monthly newsletter
-                </label><br><br>
+                <input type="checkbox" id="subscribe" name="subscribe">
+                <label for="subscribe">Please subscribe me to the monthly newsletter</label><br><br>
 
                 <button type="submit">Send Message</button>
 
@@ -88,11 +98,11 @@
     <footer>
         <p>© 2025 White Water Rafting Co.</p>
 
-        <div class="socialmedia">
-            <a href="#"><img src="images/facebook.png" alt="facebook"></a>
-            <a href="#"><img src="images/youtube.png" alt="twitter"></a>
-            <a href="#"><img src="images/instagram.png" alt="instagram"></a>
-        </div>
+        <nav>
+            <a href="#"><img src="images/facebook.png" alt="Facebook logo"></a>
+            <a href="#"><img src="images/youtube.png" alt="YouTube logo"></a>
+            <a href="#"><img src="images/instagram.png" alt="Instagram logo"></a>
+        </nav>
     </footer>
 
 </body>
