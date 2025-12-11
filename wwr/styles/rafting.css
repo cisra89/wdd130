@@ -2,8 +2,9 @@
     --primary-color: #1e88e5;
     --accent1-color: #0d47a1;
     --accent2-color: #fdd835;
-    --heading-font: 'Arial Black', sans-serif;
+    --light-bg: #ffffff;
     --body-font: Arial, Helvetica, sans-serif;
+    --heading-font: 'Arial Black', sans-serif;
 }
 
 * {
@@ -15,12 +16,13 @@
 body {
     font-family: var(--body-font);
     color: var(--accent1-color);
-    background-color: #f8f9fa;
+    background-color: #f5f7fa;
+    line-height: 1.6;
 }
 
 header, main, footer {
-    max-width: 900px;
-    margin: 0 auto;
+    max-width: 1100px;
+    margin: auto;
     padding: 0 16px;
 }
 
@@ -28,120 +30,62 @@ header {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 15px 0;
-    border-bottom: 2px solid var(--primary-color);
+    padding: 18px 0;
+    border-bottom: 3px solid var(--primary-color);
 }
 
 header img {
-    width: 100px;
-    height: auto;
+    width: 140px; 
 }
 
-header nav a {
-    padding: 10px 15px;
+nav a {
+    font-weight: bold;
     text-decoration: none;
     color: var(--accent1-color);
-    font-weight: bold;
-    transition: background 0.3s;
+    padding: 10px 18px;
+    border-radius: 6px;
+    transition: 0.3s;
 }
 
-header nav a:hover {
+nav a:hover,
+nav a.active {
     background-color: var(--accent1-color);
     color: var(--accent2-color);
-    border-radius: 5px;
 }
 
-h1, h2 {
+h1, h2, h3 {
     font-family: var(--heading-font);
     margin-bottom: 12px;
-    color: var(--accent1-color);
+}
+
+h1 {
+    font-size: 2.5em; 
+}
+h2 {
+    font-size: 2em; 
+}
+h3 {
+    font-size: 1.5em; 
 }
 
 main section {
-    margin-top: 24px;
-    padding: 16px;
-    border: 1px solid var(--primary-color);
-    border-radius: 6px;
-    background-color: #ffffff;
-}
-
-
-iframe {
-    width: 100%;
-    height: 300px;
+    margin-top: 26px;
+    padding: 20px;
+    background-color: var(--light-bg);
+    border-radius: 12px;
     border: none;
-    border-radius: 6px;
-    margin-top: 10px;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.10);
 }
 
-section figure {
-    display: inline-block;
-    width: 30%;
-    min-width: 140px;
-    text-align: center;
-    margin: 10px;
+.hero {
+    position: relative;
+    border-radius: 12px;
 }
 
-section figure img {
-    width: 100%;
+main img {
+    max-width: 100%;
+    height: auto; 
+    margin-bottom: 15px; 
     border-radius: 8px;
 }
-
-form {
-    display: flex;
-    flex-direction: column;
-    gap: 14px;
-}
-
-form label {
-    font-weight: bold;
-}
-
-input[type="text"],
-input[type="email"],
-textarea {
-    padding: 10px;
-    border: 1px solid var(--primary-color);
-    border-radius: 6px;
-    font-size: 1rem;
-}
-
-input[type="radio"],
-input[type="checkbox"] {
-    margin-right: 8px;
-    transform: scale(1.25);
-}
-
-form p {
-    margin-top: 10px;
-    font-weight: bold;
-}
-
-button[type="submit"] {
-    background-color: var(--accent1-color);
-    color: #fff;
-    font-weight: bold;
-    padding: 14px 22px;
-    border: none;
-    border-radius: 6px;
-    cursor: pointer;
-    width: fit-content;
-    transition: all 0.3s ease-in-out;
-}
-
-button[type="submit"]:hover {
-    background-color: var(--primary-color);
-    color: var(--accent2-color);
-}
-
-footer {
-    margin-top: 40px;
-    padding: 20px 0;
-    border-top: 2px solid var(--primary-color);
-    text-align: center;
-}
-
-footer nav a img {
-    width: 32px;
-    margin: 0 8px;
-}
+    
